@@ -1,20 +1,19 @@
 ---
+import "@styles/global.css";
 import Layout from "../layouts/Layout.astro";
 import Card from "@components/Card.astro";
-import "@styles/global.css";
+import BreadCrumbs from "@components/BreadCrumbs";
 ---
 
 <main>
   <div class="p-3">
 
-    <!-- Breadcrumb -->
-    <div class="flex text-sm breadcrumbs">
-      <ul>
-        <li><a>Home</a></li>
-        <li><a>Blog</a></li>
-        <li><a>Greatest Post Off All Time</a></li>
-      </ul>
-    </div>
+	<BreadCrumbs crumbs={
+		[
+			{text : "Home", href : ""}, 
+			{text : "Blog", href : ""}
+		]
+	}/>
 	
 	<div class="grid justify-center  bg-red-600 mt-32">
 		
