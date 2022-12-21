@@ -1,0 +1,103 @@
+---
+import Profile from "@components/Profile";
+import SideBar from "@components/SideBar";
+import SideBarItem from "@components/SideBar/SideBarItem";
+import SideBarSection from "@components/SideBar/SideBarSection";
+import {
+  FaHome,
+  FaPencilRuler,
+  FaPalette,
+  FaGithubAlt,
+  FaYoutube,
+  FaBriefcase,
+} from "react-icons/fa";
+import { HiChatBubbleBottomCenterText } from "react-icons/hi2";
+import { MdWavingHand } from "react-icons/md";
+import {getImage} from '@astrojs/image'
+import { Image } from '@astrojs/image/components';
+import pfpImage from 'src/images/pfp-transparent.png'
+
+const { src } = await getImage({
+src: pfpImage,
+alt: "",
+width: 718,
+height: 1045,
+})
+const { title } = Astro.props;
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1);
+
+---
+
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <link rel="preload" href={src}/>
+  </head>
+  <body>
+    <div class="drawer drawer-mobile">
+      <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+      <div class="drawer-content flex flex-col items-center justify-center">
+        <!-- OpenSideBarButton -->
+        <label
+          for="my-drawer-2"
+          class="btn btn-primary drawer-button lg:hidden"
+        >
+          Open drawer
+        </label>
+        <slot />
+      </div>
+      <div class="drawer-side">
+        <label for="my-drawer-2" class="drawer-overlay"></label>
+        <div class="p-4 w-64 h-full bg-base-300 text-base-content">
+          <!-- ProfileSection -->
+          {
+            src != null ?(
+              <Profile
+                name={"Ezekiel Halley"}
+              imgSrc={src}/>
+              ) : <></>
+          }
+
+          <!-- Menu -->
+          <SideBar>
+            {/* Navigation */}
+            <SideBarSection text="Navigation" showDivier={false} />
+            <SideBarItem href="/" isHighlighted={currentPath === ""}>
+              <FaHome /> Home
+            </SideBarItem>
+            <SideBarItem href="/blog" isHighlighted={currentPath === "blog"}>
+              <HiChatBubbleBottomCenterText /> Blog
+            </SideBarItem>
+            <SideBarItem
+              href="/projects"
+              isHighlighted={currentPath === "projects"}
+            >
+              <FaPencilRuler /> Projects
+            </SideBarItem>
+            <SideBarItem href="/art" isHighlighted={currentPath === "art"}>
+              <FaPalette /> Art
+            </SideBarItem>
+            <SideBarItem href="/about" isHighlighted={currentPath === "about"}>
+              <MdWavingHand /> About
+            </SideBarItem>
+
+            {/* Links */}
+            <SideBarSection text="Links" showDivier={true} />
+            <SideBarItem href="https://github.com/pyxus">
+              <FaGithubAlt /> Github
+            </SideBarItem>
+            <SideBarItem href="https://www.youtube.com/@Pyxus/">
+              <FaYoutube /> Youtube
+            </SideBarItem>
+            <SideBarItem href="/">
+              <FaBriefcase /> My Conventions
+            </SideBarItem>
+          </SideBar>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
