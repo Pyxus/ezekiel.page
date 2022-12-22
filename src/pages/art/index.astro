@@ -8,7 +8,7 @@ import { Image, Picture } from "@astrojs/image/components";
 <SiteLayout title={"Art | Ezekiel Halley"}>
   <div class="w-full h-screen p-20">
     <div class="container items-center">
-      <div class="ap-6 pt-2 columns-3xs">
+      <div class="gap-6 pt-2 columns-3xs">
         {
           art
             .sort((image1, image2) => image1.year > image2.year ? -1 : 1)
@@ -16,7 +16,7 @@ import { Image, Picture } from "@astrojs/image/components";
               return (
                 <figure class="py-4 break-inside-avoid">
                   <img
-                    class="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100"
+                    class="rounded-md opacity-75 hover:opacity-100"
                     src={image.src}
                     alt={image.alt}
                   />
