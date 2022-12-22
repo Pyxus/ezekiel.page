@@ -62,7 +62,6 @@ const currentPath = Astro.url.pathname.split('/')[1];
           <SideBar>
             {/* Navigation */}
             <SideBarSection text="Navigation" showDivier={false} />
-            {console.log(currentPath)}
             <SideBarItem href="/" isHighlighted={currentPath === ""}>
               <FaHome /> Home
             </SideBarItem>

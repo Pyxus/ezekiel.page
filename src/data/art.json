@@ -1,51 +1,106 @@
 [
-    {
-      "id": "beach",
-      "title": "Beach",
-      "link": "https://pyxus.dev/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F22bfde7d-c13e-4336-9a88-bcae9cb3c45f%2FClaudia.jpg?table=block&id=fa04097d-16c2-4101-976f-b0fcdbbd15c7&spaceId=0137bc6e-407e-4cca-88cd-8c14d7634ea7&width=2000&userId=&cache=v2",
-      "width": 900,
-      "height": 900
-    },
-    {
-      "id": "beach",
-      "title": "Beach",
-      "link": "https://pyxus.dev/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0a00dc4b-cd45-4455-8e81-4ee473a8dc25%2FTurtle_Mitsuri.png?table=block&id=9471e348-b8e3-4283-93ff-7e3788a34130&spaceId=0137bc6e-407e-4cca-88cd-8c14d7634ea7&width=2000&userId=&cache=v2",
-      "width": 500,
-      "height": 500
-    },
-    {
-      "id": "beach",
-      "title": "Beach",
-      "link": "https://pyxus.dev/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F1edee986-d83d-4355-a38a-e9a6286e7c6b%2Fpfp2.png?table=block&id=1e9639c1-4d3a-4d08-9e35-7252b2fd8d47&spaceId=0137bc6e-407e-4cca-88cd-8c14d7634ea7&width=2000&userId=&cache=v2",
-      "width": 600,
-      "height": 500
-    },
-    {
-      "id": "beach",
-      "title": "Beach",
-      "link": "https://pyxus.dev/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F26acebf5-ed59-4fc4-81b7-73db3eccc397%2FMaru.jpg?table=block&id=2cc5b202-1821-44e7-9e12-3dca34df954f&spaceId=0137bc6e-407e-4cca-88cd-8c14d7634ea7&width=2000&userId=&cache=v2",
-      "width": 500,
-      "height": 500
-    },
-    {
-      "id": "beach",
-      "title": "Beach",
-      "link": "https://pyxus.dev/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F3fca78ab-d493-4fda-b4fc-93dede4b6e51%2FMetsu_Jujutsu_Minamalist.jpg?table=block&id=77c22500-c6dd-439f-b19a-7399a53c208b&spaceId=0137bc6e-407e-4cca-88cd-8c14d7634ea7&width=2000&userId=&cache=v2",
-      "width": 500,
-      "height": 500
-    },
-    {
-      "id": "beach",
-      "title": "Beach",
-      "link": "https://pyxus.dev/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F37afdb10-a8bd-4db0-b5f3-d16b2e429e7d%2FEh6tWgmWoAABXtr.jpeg?table=block&id=8d784d71-33a4-4c57-8f82-60d31f341fe0&spaceId=0137bc6e-407e-4cca-88cd-8c14d7634ea7&width=2000&userId=&cache=v2",
-      "width": 500,
-      "height": 500
-    },
-    {
-      "id": "beach",
-      "title": "Beach",
-      "link": "https://pyxus.dev/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F875ff8d4-4c08-4f88-bf38-7b331b704390%2FIsataou.jpg?table=block&id=b30b9c5f-1dc0-4b4d-9efb-5acd3eabe06e&spaceId=0137bc6e-407e-4cca-88cd-8c14d7634ea7&width=2000&userId=&cache=v2",
-      "width": 500,
-      "height": 500
-    }
-  ]
+  {
+    "title": "Profile Picture 2022",
+    "desc": "Drawing of my friend, who goes by turtle, based on their cosplay of Mitsuri from the anime Demon Slayer.",
+    "year": 2022,
+    "tags": ["drawing", "character"],
+    "src": "art/pfp-2022.webp",
+    "alt": ""
+  },
+  {
+    "title": "Cladua Sinclair - GGS Study",
+    "desc": "Study of Guilty Gear Strive art style featuring my character Claudia.",
+    "year": 2022,
+    "tags": ["drawing", "character"],
+    "src": "art/claudia-ggs.webp",
+    "alt": ""
+  },
+  {
+    "title": "Maru - GGS Study",
+    "desc": "Study of Guilty Gear Strive art style featuring my friend's character.",
+    "year": 2022,
+    "tags": ["drawing", "character"],
+    "src": "art/maru-ggs.webp",
+    "alt": ""
+  },
+  {
+    "title": "Turtle Mitsuri",
+    "desc": "Drawing of my friend, who goes by turtle, based on their cosplay of Mitsuri from the anime Demon Slayer.",
+    "year": 2022,
+    "tags": ["drawing", "character"],
+    "src": "art/turtle-mitsuri.webp",
+    "alt": ""
+  },
+  {
+    "title": "Allium - Bring Me Hope",
+    "desc": "My interpretation of Allium. The protagonist of my friend Fern's game 'Bring Me Hope'",
+    "year": 2021,
+    "tags": ["drawing", "character"],
+    "src": "art/allium-concept.webp",
+    "alt": ""
+  },
+  {
+    "title": "Anasztazia",
+    "desc": "Concept sketch of my character Anasztazia",
+    "year": 2021,
+    "tags": ["sketch", "character"],
+    "src": "art/anastasia-sketch.webp",
+    "alt": ""
+  },
+  {
+    "title": "Authority of Restraint",
+    "desc": "Enemy concept sketch.",
+    "year": 2021,
+    "tags": ["sketch", "character"],
+    "src": "art/authority-of-restraint-sketch.webp",
+    "alt": ""
+  },
+  {
+    "title": "Da_K Sketch",
+    "desc": "Sketch of a friend's character",
+    "year": 2021,
+    "tags": ["drawing", "character"],
+    "src": "art/da-k-sketch.webp",
+    "alt": ""
+  },
+  {
+    "title": "Isatou Concept",
+    "desc": "Drawing of my friend, who goes by turtle, based on their cosplay of Mitsuri from the anime Demon Slayer.",
+    "year": 2021,
+    "tags": ["drawing", "character"],
+    "src": "art/isatou-concept.webp",
+    "alt": ""
+  },
+  {
+    "title": "Jujutsu Giovanna Sketch",
+    "desc": "Drawing of my friend, who goes by turtle, based on their cosplay of Mitsuri from the anime Demon Slayer.",
+    "year": 2021,
+    "tags": ["drawing", "character"],
+    "src": "art/jujutsu-giovanna-sketch.webp",
+    "alt": ""
+  },
+  {
+    "title": "Metsu Persona 5 Confidant",
+    "desc": "Drawing of my friend, who goes by turtle, based on their cosplay of Mitsuri from the anime Demon Slayer.",
+    "year": 2020,
+    "tags": ["drawing", "character"],
+    "src": "art/metsu-p5-confidant.webp",
+    "alt": ""
+  },
+  {
+    "title": "Moon Authority",
+    "desc": "Drawing of my friend, who goes by turtle, based on their cosplay of Mitsuri from the anime Demon Slayer.",
+    "year": 2021,
+    "tags": ["drawing", "character"],
+    "src": "art/moon-authority.webp",
+    "alt": ""
+  },
+  {
+    "title": "Sin Drawing",
+    "desc": "Drawing of my friend, who goes by turtle, based on their cosplay of Mitsuri from the anime Demon Slayer.",
+    "year": 2021,
+    "tags": ["drawing", "character"],
+    "src": "art/sin-drawing.webp",
+    "alt": ""
+  }
+]
