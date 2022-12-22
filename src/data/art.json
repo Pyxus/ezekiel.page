@@ -4,7 +4,7 @@
     "desc": "Drawing of my friend, who goes by turtle, based on their cosplay of Mitsuri from the anime Demon Slayer.",
     "year": 2022,
     "tags": ["drawing", "character"],
-    "src": "public/art/pfp-2022.webp",
+    "src": "pfp-2022.webp",
     "alt": ""
   },
   {
@@ -12,7 +12,7 @@
     "desc": "Study of Guilty Gear Strive art style featuring my character Claudia.",
     "year": 2022,
     "tags": ["drawing", "character"],
-    "src": "public/art/claudia-ggs.webp",
+    "src": "claudia-ggs.webp",
     "alt": ""
   },
   {
@@ -20,7 +20,7 @@
     "desc": "Study of Guilty Gear Strive art style featuring my friend's character.",
     "year": 2022,
     "tags": ["drawing", "character"],
-    "src": "public/art/maru-ggs.webp",
+    "src": "maru-ggs.webp",
     "alt": ""
   },
   {
@@ -28,7 +28,7 @@
     "desc": "Drawing of my friend, who goes by turtle, based on their cosplay of Mitsuri from the anime Demon Slayer.",
     "year": 2022,
     "tags": ["drawing", "character"],
-    "src": "public/art/turtle-mitsuri.webp",
+    "src": "turtle-mitsuri.webp",
     "alt": ""
   },
   {
@@ -36,7 +36,7 @@
     "desc": "My interpretation of Allium. The protagonist of my friend Fern's game 'Bring Me Hope'",
     "year": 2021,
     "tags": ["drawing", "character"],
-    "src": "public/art/allium-concept.webp",
+    "src": "allium-concept.webp",
     "alt": ""
   },
   {
@@ -44,7 +44,7 @@
     "desc": "Concept sketch of my character Anasztazia",
     "year": 2021,
     "tags": ["sketch", "character"],
-    "src": "public/art/anastasia-sketch.webp",
+    "src": "anastasia-sketch.webp",
     "alt": ""
   },
   {
@@ -52,7 +52,7 @@
     "desc": "Enemy concept sketch.",
     "year": 2021,
     "tags": ["sketch", "character"],
-    "src": "public/art/authority-of-restraint-sketch.webp",
+    "src": "authority-of-restraint-sketch.webp",
     "alt": ""
   },
   {
@@ -60,7 +60,7 @@
     "desc": "Sketch of a friend's character",
     "year": 2021,
     "tags": ["drawing", "character"],
-    "src": "public/art/da-k-sketch.webp",
+    "src": "da-k-sketch.webp",
     "alt": ""
   },
   {
@@ -68,7 +68,7 @@
     "desc": "Drawing of my friend, who goes by turtle, based on their cosplay of Mitsuri from the anime Demon Slayer.",
     "year": 2021,
     "tags": ["drawing", "character"],
-    "src": "public/art/isatou-concept.webp",
+    "src": "isatou-concept.webp",
     "alt": ""
   },
   {
@@ -76,7 +76,7 @@
     "desc": "Drawing of my friend, who goes by turtle, based on their cosplay of Mitsuri from the anime Demon Slayer.",
     "year": 2021,
     "tags": ["drawing", "character"],
-    "src": "public/art/jujutsu-giovanna-sketch.webp",
+    "src": "jujutsu-giovanna-sketch.webp",
     "alt": ""
   },
   {
@@ -84,7 +84,7 @@
     "desc": "Drawing of my friend, who goes by turtle, based on their cosplay of Mitsuri from the anime Demon Slayer.",
     "year": 2020,
     "tags": ["drawing", "character"],
-    "src": "public/art/metsu-p5-confidant.webp",
+    "src": "metsu-p5-confidant.webp",
     "alt": ""
   },
   {
@@ -92,7 +92,7 @@
     "desc": "Drawing of my friend, who goes by turtle, based on their cosplay of Mitsuri from the anime Demon Slayer.",
     "year": 2021,
     "tags": ["drawing", "character"],
-    "src": "public/art/moon-authority.webp",
+    "src": "moon-authority.webp",
     "alt": ""
   },
   {
@@ -100,7 +100,7 @@
     "desc": "Drawing of my friend, who goes by turtle, based on their cosplay of Mitsuri from the anime Demon Slayer.",
     "year": 2021,
     "tags": ["drawing", "character"],
-    "src": "public/art/sin-drawing.webp",
+    "src": "sin-drawing.webp",
     "alt": ""
   }
 ]
