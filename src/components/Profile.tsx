@@ -8,7 +8,7 @@ interface ProfileProps{
 export default function Profile({name, imgSrc}: ProfileProps) {
   return (
     <div className="flex flex-col items-center justify-center pb-6">
-    <a href="">
+    <a href="/">
       <div
         className="avatar flex flex-col items-center justify-center pb-3"
       >
