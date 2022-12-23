@@ -11,17 +11,19 @@ import { Image, Picture } from "@astrojs/image/components";
       <div class="gap-6 pt-2 columns-3xs">
         {
           art
-            .sort((image1, image2) => image1.year > image2.year ? -1 : 1)
+            .sort((image1, image2) => (image1.year > image2.year ? -1 : 1))
             .map((image) => {
               return (
-                <figure class="py-4 break-inside-avoid">
-                  <img
-                    class="rounded-md opacity-75 hover:opacity-100"
-                    src={image.src}
-                    alt={image.alt}
-                    title={image.title}
-                  />
-                </figure>
+                <a href={`/art/${image.src}`} target="_blank">
+                  <figure class="py-4 break-inside-avoid">
+                    <img
+                      class="rounded-md opacity-75 hover:opacity-100"
+                      src={image.src}
+                      alt={image.alt}
+                      title={image.title}
+                    />
+                  </figure>
+                </a>
               );
             })
         }
