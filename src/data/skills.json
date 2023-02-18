@@ -1,0 +1,68 @@
+{
+  "Languages": [
+    {
+      "name": "C#/.NET",
+      "comment": "Proficient - Used in many personal projects, and some university assignments."
+    },
+    {
+      "name": "Java",
+      "comment": "Proficient - Used in many school projects."
+    },
+    {
+      "name": "GDScript",
+      "comment": "Proficient - Used in many personal projects."
+    },
+    {
+      "name": "SQL",
+      "comment": "Familiar - Used in some university projects."
+    },
+    {
+      "name": "JavaScript / TypeScript",
+      "comment": "Familiar - Used in university web dev class and a few personal projects (such as this website!)."
+    },
+    {
+      "name": "Kotlin",
+      "comment": "Familiar - Used in university android development class."
+    },
+    {
+      "name": "C++",
+      "comment": "Novice - Self study; Used in some simple university assignments"
+    },
+    {
+      "name": "Rust",
+      "comment": "Learning - Self study."
+    }
+  ],
+  "Tools": [
+    {
+      "name": "Godot",
+      "comment": "Proficient - Game engine of choice."
+    },
+    {
+      "name": "Git / GitHub",
+      "comment": "Proficient - Used for several projects both personal and univeristy."
+    },
+    {
+      "name": "GameMaker Studio 2",
+      "comment": "Familiar - Used in several side projects during high school."
+    },
+    {
+      "name": "Android Studio",
+      "comment": "Familiar - Used in university android development class."
+    }
+  ],
+  "Other": [
+    {
+      "name": "Digital Art",
+      "comment": "Experience creating digital character art, and graphic designs."
+    },
+    {
+      "name": "PC Building",
+      "comment": "Built my computer back in middle school and have been upgrading it ever since. Have also built and diagnosed computers for friends and family."
+    },
+    {
+      "name": "Music",
+      "comment": "This is a joke entry, don't let me touch instruments."
+    }
+  ]
+}

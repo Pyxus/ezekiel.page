@@ -1,0 +1,50 @@
+{
+    "Game Development": [
+        {
+            "name": "Godot Engine",
+            "href": "https://godotengine.org/"
+        },
+        {
+            "name": "GameMaker Studio 2",
+            "href": "https://gamemaker.io/en"
+        }
+    ],
+    "Digital Art": [
+        {
+            "name": "Clip Studio Paint",
+            "href": "https://www.clipstudio.net/en/"
+        },
+        {
+            "name": "Affinity 2 Suite",
+            "href": "https://affinity.serif.com/en-us/"
+        }
+    ],
+    "Code Editor": [
+        {
+            "name": "Visual Studio Code",
+            "href": "https://code.visualstudio.com/"
+        }
+    ],
+    "Terminal": [
+        {
+            "name": "ConEmu",
+            "href": "https://conemu.github.io/"
+        }
+    ],
+    "Notes / Planning": [
+        {
+            "name": "Notion",
+            "href": "https://www.notion.so/"
+        }
+    ],
+    "Package Manager": [
+        {
+            "name": "Scoop",
+            "href": "https://scoop.sh/"
+        },
+        {
+            "name": "Affinity 2 Suite",
+            "href": "https://chocolatey.org/"
+        }
+    ]
+}

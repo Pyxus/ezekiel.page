@@ -1,9 +1,64 @@
 ---
 import SiteLayout from "@layouts/SiteLayout.astro";
 import "@styles/global.css";
-
+import skills from "@data/skills.json";
 ---
 
+<SiteLayout title={"About me | Ezekiel Halley"}>
+  <div class="w-full h-full p-20">
+    <div class="h-full">
+      <h1 class="">About Me</h1>
+      <p>
+        Hey, I'm Ezekiel! I am a recent computer science graduate with an
+        interest in game development. My main motivation for creating this site
+        is to share my projects and creations with those interest.
+      </p>
 
-    <SiteLayout title={"About me | Ezekiel Halley"}>
-    </SiteLayout>
+      <h1 class="">Skills</h1>
+      {
+        Object.keys(skills).map((skill) => {
+          return (
+            <>
+            <h2 class="bg-neutral">{skill}</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th></th>
+                  </tr>
+                </thead>
+              <tbody>
+              
+              {skills[skill as keyof typeof skills].map((entry) => {
+              return (
+              <tr>
+              <td>{entry.name}</td>
+              <td>{entry.comment}</td>
+            </tr>
+                )
+            })}
+          
+              </tbody>
+              </table>
+              </>
+            );
+            
+        })
+        
+      }
+      <table class="table-fixed">
+        <thead>
+          <tr>
+            <th align="left">Languages</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
+            <td>Malcolm Lockyer</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</SiteLayout>

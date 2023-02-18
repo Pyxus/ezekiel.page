@@ -65,9 +65,11 @@ const currentPath = Astro.url.pathname.split('/')[1];
             <SideBarItem href="/" isHighlighted={currentPath === ""}>
               <FaHome /> Home
             </SideBarItem>
+            <!--
             <SideBarItem href="/blog" isHighlighted={currentPath === "blog"}>
               <HiChatBubbleBottomCenterText /> Blog
             </SideBarItem>
+             -->
             <SideBarItem
               href="/projects"
               isHighlighted={currentPath === "projects"}
