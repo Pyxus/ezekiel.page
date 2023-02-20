@@ -6,8 +6,10 @@ interface SideBarProps {
 
 export default function SideBar({ children }: SideBarProps) {
   return (
-    <nav>
-      <ul className="menu">{children}</ul>
-    </nav>
+    <div className="border border-accent bg-primary">
+      <div className="flex justify-center">
+        {children}
+      </div>
+    </div>
   );
 }

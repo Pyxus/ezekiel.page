@@ -2,13 +2,27 @@
 import Profile from "@components/Profile";
 import SideBar from "@components/SideBar";
 import SideBarItem from "@components/SideBar/SideBarItem";
-import SideBarSection from "@components/SideBar/SideBarSection";
-import {FiGlobe} from "react-icons/fi/index.js"
-import { RiCodeBoxFill } from "react-icons/ri/index.js";
-import { HiChatBubbleBottomCenterText } from "react-icons/hi2/index.js";
-import { MdWavingHand } from "react-icons/md/index.js";
+import {
+  FaPalette,
+  FaGithubAlt,
+  FaWindowMinimize,
+} from "react-icons/fa/index.js";
+import { FiGlobe } from "react-icons/fi/index.js";
+import {
+  RiCodeBoxFill,
+  RiContactsFill,
+  RiMailFill,
+  RiLinkedinBoxFill,
+  RiInstagramFill,
+  RiWindow2Fill,
+  RiCloseFill,
+} from "react-icons/ri/index.js";
+import { ImProfile } from "react-icons/im/index.js";
+import NavBar from "@components/NavBar/index.js";
+import SiteLogo from "@components/SiteLogo";
 import { getImage } from "@astrojs/image";
 import pfpImage from "src/images/pfp-transparent.png";
+import NavItem from "@components/NavBar/NavItem";
 
 const { src } = await getImage({
   src: pfpImage,
@@ -16,6 +30,7 @@ const { src } = await getImage({
   width: 718,
   height: 1045,
 });
+
 const { title } = Astro.props;
 const currentPath = Astro.url.pathname.split("/")[1];
 ---
@@ -27,45 +42,86 @@ const currentPath = Astro.url.pathname.split("/")[1];
     <title>{title}</title>
     <link as="image" rel="preload" href={src} />
   </head>
-  <body>
-    <div class="flex items-start justify-center h-screen pt-6 bg-secondary">
-      <div class="m-2 text-white columns-1 font-jetbrains">
-        <div class="border border-accent bg-primary">
-          <div
-            class="bg-highlight border mx-auto mt-8 w-36 h-[7.7rem] border-accent overflow-hidden"
-          >
-            <img
-              class="mx-auto translate-y-1"
-              width="100px"
-              src={src}
-              alt={"Cartoon drawing of Ezekiel"}
-            />
-          </div>
-          <h1 class="m-2 text-lg font-bold text-center">Ezekiel Halley</h1>
-          <p class="mb-4 ml-3 mr-3 text-xs font-thin text-center">
-            Developer & Digital Artist
-          </p>
-        </div>
-        <div class="border border-accent bg-primary">
-          <div class="flex justify-center">
-            <nav>
-              <div class="justify-center m-4 columns-1">
-                <RiCodeBoxFill className={"mx-auto"} size={32} />
+  <body class="bg-secondary">
+    <div class="flex items-start justify-center pt-6">
+      <div
+        class="m-2 border shadow-xl text-accent columns-1 font-jetbrains border-accent bg-primary"
+      >
+        <SiteLogo logoSrc={src!} href={"/"} />
+        <hr />
+        <NavBar>
+          <div>
+            <ul>
+              <NavItem
+                href={"/projects"}
+                isHighlighted={currentPath == "projects"}
+              >
+                <RiCodeBoxFill className={"mx-auto"} size={28} />
                 <div class="text-center">PROJECTS</div>
-              </div>
-            </nav>
+              </NavItem>
+              <NavItem href={"/art"} isHighlighted={currentPath == "art"}>
+                <FaPalette className={"mx-auto"} size={28} />
+                <div class="text-center">ART</div>
+              </NavItem>
+              <NavItem href={"/resume"} isHighlighted={currentPath == "resume"}>
+                <ImProfile className={"mx-auto"} size={28} />
+                <div class="text-center">RESUME</div>
+              </NavItem>
+              <NavItem href={"/about"} isHighlighted={currentPath == "about"}>
+                <RiContactsFill className={"mx-auto"} size={28} />
+                <div class="text-center">ABOUT</div>
+              </NavItem>
+              <NavItem
+                href={"/contact"}
+                isHighlighted={currentPath == "contact"}
+              >
+                <RiMailFill className={"mx-auto"} size={28} />
+                <div class="text-center">CONTACT</div>
+              </NavItem>
+            </ul>
           </div>
-        </div>
+          <div>
+            <ul class="grid grid-cols-3 mx-auto">
+              <NavItem
+                href={"https://www.linkedin.com/in/ezekiel-halley"}
+                tooltip={"LinkedIn"}
+              >
+                <RiLinkedinBoxFill className={"mx-auto"} size={20} />
+              </NavItem>
+              <NavItem href={"https://github.com/Pyxus/"} tooltip={"Github"}>
+                <FaGithubAlt className={"mx-auto"} size={20} />
+              </NavItem>
+              <NavItem
+                href={"https://www.instagram.com/pyxus_/"}
+                tooltip={"Instagram"}
+              >
+                <RiInstagramFill className={"mx-auto"} size={20} />
+              </NavItem>
+            </ul>
+          </div>
+          <div></div>
+        </NavBar>
       </div>
-      <div class="w-5/12 m-2 text-white border border-accent bg-primary">
-        <div class="inline-flex p-2">
-          <FiGlobe className={"my-auto mr-2"}/>
-          <p class="">https://ezekiel.page</p>
+      <div
+        class="w-6/12 m-2 text-white border shadow-xl border-accent bg-primary"
+      >
+        <div class="inline-flex w-full p-2">
+          <FiGlobe className={"my-auto mr-2"} />
+          <span class="">{`https://ezekiel.page/${currentPath}`}</span>
+          <span class="inline-flex ml-auto">
+            <div class="p-[.08rem] my-auto mr-2 text-black bg-accent">
+              <FaWindowMinimize />
+            </div>
+            <div class="p-[.08rem] my-auto mr-2 text-black bg-accent">
+              <RiWindow2Fill />
+            </div>
+            <div class="p-[.08rem] my-auto mr-2 text-black bg-highlight">
+              <RiCloseFill />
+            </div>
+          </span>
         </div>
         <div class="mx-3 mb-3 border border-accent">
-          Test
-          Test
-          Test
+          <slot />
         </div>
       </div>
     </div>

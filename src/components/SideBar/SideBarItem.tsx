@@ -13,7 +13,7 @@ export default function SideBarItem({
   isHighlighted,
 }: SideBarItemProps) {
   return (
-    <li className={isHighlighted ? "bordered" : "hover-bordered"}>
+    <li className={"justify-center m-4 columns-1"}>
       <a href={href}>{children}</a>
     </li>
   );

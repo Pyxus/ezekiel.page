@@ -5,7 +5,7 @@ import skills from "@data/skills.json";
 ---
 
 <SiteLayout title={"About me | Ezekiel Halley"}>
-  <div class="w-full h-full p-20">
+  <div class="p-10">
     <div class="h-full">
       <h1 class="">About Me</h1>
       <p>
@@ -13,52 +13,42 @@ import skills from "@data/skills.json";
         interest in game development. My main motivation for creating this site
         is to share my projects and creations with those interest.
       </p>
-
+      <ul>
+        <li>
+          <b>Fun fact:</b> My username 'Pyxus' is just a combination of Pixel and
+          Nexus. I came up with it back in middle school, it was supposed to be
+          a clever way of saying "digital image".
+        </li>
+      </ul>
+      <hr class="my-5" />
       <h1 class="">Skills</h1>
       {
         Object.keys(skills).map((skill) => {
           return (
             <>
-            <h2 class="bg-neutral">{skill}</h2>
-            <table>
-              <thead>
-                <tr>
-                  <th></th>
-                  <th></th>
+              <h2 class="pt-5 pb-1 font-bold">{skill}</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th />
+                    <th />
                   </tr>
                 </thead>
-              <tbody>
-              
-              {skills[skill as keyof typeof skills].map((entry) => {
-              return (
-              <tr>
-              <td>{entry.name}</td>
-              <td>{entry.comment}</td>
-            </tr>
-                )
-            })}
-          
-              </tbody>
+                <tbody>
+                  {skills[skill as keyof typeof skills].map((entry) => {
+                    return (
+                      <tr class="border border-black ">
+                        <td class="p-3 bg-slate-800">{entry.name}</td>
+                        <td class="px-10 py-1 bg-slate-700">{entry.comment}</td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
               </table>
-              </>
-            );
-            
+            </>
+          );
         })
-        
       }
-      <table class="table-fixed">
-        <thead>
-          <tr>
-            <th align="left">Languages</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
-            <td>Malcolm Lockyer</td>
-          </tr>
-        </tbody>
-      </table>
     </div>
   </div>
 </SiteLayout>
