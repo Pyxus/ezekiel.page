@@ -1,6 +1,4 @@
 ---
-import SideBar from "@components/SideBar";
-import SideBarItem from "@components/SideBar/SideBarItem";
 import {
   FaPalette,
   FaGithubAlt,
@@ -16,7 +14,6 @@ import {
   RiWindow2Fill,
   RiCloseFill,
 } from "react-icons/ri/index.js";
-import { ImProfile } from "react-icons/im/index.js";
 import NavBar from "@components/NavBar/index.js";
 import SiteLogo from "@components/SiteLogo";
 import { getImage } from "@astrojs/image";
@@ -32,6 +29,7 @@ const { src } = await getImage({
 
 const { title } = Astro.props;
 const currentPath = Astro.url.pathname.split("/")[1];
+const fullPath = Astro.url.pathname;
 ---
 
 <html lang="en">
@@ -106,22 +104,22 @@ const currentPath = Astro.url.pathname.split("/")[1];
       <div
         class="w-6/12 m-2 text-white border shadow-xl border-accent bg-primary"
       >
-        <div class="inline-flex w-full p-2">
+        <div class="inline-flex w-full p-2 font-bold text-accent">
           <FiGlobe className={"my-auto mr-2"} />
-          <span class="">{`https://ezekiel.page/${currentPath}`}</span>
+          <span class="">{`https://ezekiel.page${fullPath}`}</span>
           <span class="inline-flex ml-auto">
-            <div class="p-[.08rem] my-auto mr-2 text-black bg-accent">
+            <div class="p-[.08rem] my-auto mr-2 hover:opacity-0 transition text-black bg-accent">
               <FaWindowMinimize />
             </div>
-            <div class="p-[.08rem] my-auto mr-2 text-black bg-accent">
+            <div class="p-[.08rem] my-auto mr-2 hover:opacity-0 transition text-black bg-accent">
               <RiWindow2Fill />
             </div>
-            <div class="p-[.08rem] my-auto mr-2 text-black bg-highlight">
+            <div class="p-[.08rem] my-auto mr-2 hover:opacity-0 transition text-black bg-highlight">
               <RiCloseFill />
             </div>
           </span>
         </div>
-        <div class="mx-3 mb-3 border border-accent">
+        <div class="mx-3 mb-3 border text-black border-accent bg-accent">
           <slot />
         </div>
       </div>

@@ -14,10 +14,14 @@ import { Image, Picture } from "@astrojs/image/components";
             .sort((image1, image2) => (image1.year > image2.year ? -1 : 1))
             .map((image) => {
               return (
-                <a href={`/art/${image.src}`} target="_blank">
-                  <figure class="py-4 break-inside-avoid">
+                <a
+                  href={`/art/${image.src
+                    .replace(/^.*[\\\/]/, "")
+                    .replace(/.[^.]*$/, "")}`}
+                >
+                  <figure class="p-3 m-3 transition hover:scale-105 break-inside-avoid hover:bg-black bg-primary">
                     <img
-                      class="rounded-md opacity-75 hover:opacity-100"
+                      class="border opacity-75 border-accent hover:opacity-100"
                       src={image.src}
                       alt={image.alt}
                       title={image.title}

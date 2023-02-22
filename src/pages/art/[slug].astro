@@ -1,0 +1,94 @@
+---
+import art from "@data/art.json";
+import SiteLayout from "@layouts/SiteLayout.astro";
+import { SlArrowLeft, SlArrowRight } from "react-icons/sl/index.js";
+
+export function getStaticPaths() {
+  let paths = art.map((artMeta) => {
+    let filename: string = artMeta.src
+      .replace(/^.*[\\\/]/, "")
+      .replace(/.[^.]*$/, "");
+    return {
+      params: {
+        slug: filename,
+      },
+    };
+  });
+
+  const help = "a";
+  let test = paths.map((p) => {
+    return {
+      params: { slug: p.params.slug },
+      props: { help },
+    };
+  });
+
+  return [test, paths];
+}
+
+const { slug } = Astro.params;
+const artMeta = art.find((artMeta) => {
+  let filename: string = artMeta.src
+    .replace(/^.*[\\\/]/, "")
+    .replace(/.[^.]*$/, "");
+  return filename == slug;
+});
+
+let prevSlug = undefined;
+let nextSlug = undefined;
+
+art.every((artMeta, i) => {
+  let filename: string = artMeta.src
+    .replace(/^.*[\\\/]/, "")
+    .replace(/.[^.]*$/, "");
+
+  if (filename === slug) {
+    if (i - 1 >= 0) {
+      prevSlug = art[i - 1].src.replace(/^.*[\\\/]/, "").replace(/.[^.]*$/, "");
+    }
+    if (i + 1 < art.length) {
+      nextSlug = art[i + 1].src.replace(/^.*[\\\/]/, "").replace(/.[^.]*$/, "");
+    }
+    return false;
+  }
+
+  return true;
+});
+
+console.log(prevSlug);
+console.log(nextSlug);
+---
+
+<SiteLayout title={"Art | Ezekiel Halley"}>
+  {
+    artMeta ? (
+      <div class="relative overflow-hidden group">
+        <img class="object-cover" src={artMeta.src} />
+        {prevSlug ? (
+          <a href={`${prevSlug}`}>
+            <div class="absolute p-2 text-white -translate-y-1/2 rounded-lg opacity-0 bg-primary group-hover:opacity-100 bg-opacity-60 top-1/2 left-5">
+              <SlArrowLeft size={64} />
+            </div>
+          </a>
+        ) : null}
+
+        {nextSlug ? (
+          <a href={`${nextSlug}`}>
+            <div class="absolute p-2 text-white -translate-y-1/2 rounded-lg opacity-0 bg-primary group-hover:opacity-100 bg-opacity-60 top-1/2 right-5">
+              <SlArrowRight size={64} />
+            </div>
+          </a>
+        ) : null}
+
+        <div class="absolute bottom-0 w-full h-auto p-5 text-2xl text-center transition -translate-x-1/2 bg-opacity-0 group-hover:backdrop-blur-sm group-hover:bg-gradient-to-t from-primary group-hover:bg-opacity-40 left-1/2">
+          <div class="px-3 space-y-3 text-white transition opacity-0 columns-1 group-hover:opacity-100">
+            <div class="font-bold underline">{`${artMeta.title} (${artMeta.year})`}</div>
+            <div class="text-justify">{artMeta.desc}</div>
+          </div>
+        </div>
+      </div>
+    ) : (
+      <div>Failed to Fetch Image</div>
+    )
+  }
+</SiteLayout>
