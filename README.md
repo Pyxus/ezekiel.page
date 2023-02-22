@@ -6,8 +6,8 @@ My personal website.
 
 # Technologies Used
 
-- [!Astro](https://astro.build/)
+- [Astro](https://astro.build/)
 
-- [!React](https://reactjs.org/)
+- [React](https://reactjs.org/)
 
-- [!NodeJS](https://nodejs.org/en/)
+- [NodeJS](https://nodejs.org/en/)
