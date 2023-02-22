@@ -20,7 +20,7 @@ import skills from "@data/skills.json";
           a clever way of saying "digital image".
         </li>
       </ul>
-      <hr class="my-5" />
+      <hr class="my-5 border-1 border-primary"/>
       <h1 class="">Skills</h1>
       {
         Object.keys(skills).map((skill) => {
@@ -37,7 +37,7 @@ import skills from "@data/skills.json";
                 <tbody>
                   {skills[skill as keyof typeof skills].map((entry) => {
                     return (
-                      <tr class="border border-black ">
+                      <tr class="text-white border border-black">
                         <td class="p-3 bg-slate-800">{entry.name}</td>
                         <td class="px-10 py-1 bg-slate-700">{entry.comment}</td>
                       </tr>
