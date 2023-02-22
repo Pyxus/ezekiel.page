@@ -62,7 +62,7 @@ art.every((artMeta, i) => {
       <div class="relative overflow-hidden group">
         <img class="object-cover" src={artMeta.src} />
         {prevSlug ? (
-          <a href={`./${prevSlug}`}>
+          <a href={`/art/${prevSlug}`}>
             <div class="absolute p-2 text-white -translate-y-1/2 rounded-lg opacity-0 bg-primary group-hover:opacity-100 bg-opacity-60 top-1/2 left-5">
               <SlArrowLeft size={64} />
             </div>
@@ -70,7 +70,7 @@ art.every((artMeta, i) => {
         ) : null}
 
         {nextSlug ? (
-          <a href={`./${nextSlug}`}>
+          <a href={`/art/${nextSlug}`}>
             <div class="absolute p-2 text-white -translate-y-1/2 rounded-lg opacity-0 bg-primary group-hover:opacity-100 bg-opacity-60 top-1/2 right-5">
               <SlArrowRight size={64} />
             </div>
