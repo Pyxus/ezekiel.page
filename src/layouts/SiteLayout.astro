@@ -34,29 +34,29 @@ const fullPath = Astro.url.pathname;
 
 <style>
   body {
-    background-image: linear-gradient(
-        rgba(255, 255, 255, 0.1) 2px,
-        transparent 2px
-      ),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.1) 2px, transparent 1px),
-      linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
-    background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
-  }
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.1) 2px,
+      transparent 2px
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 2px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+}
 </style>
 
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>{title}</title>
     <link as="image" rel="preload" href={src} />
+    <title>{title}</title>
   </head>
   <body class="bg-secondary">
     <div class="flex items-start justify-center pt-6">
       <div
-        class="m-2 border shadow-xl text-accent columns-1 font-jetbrains border-accent bg-primary"
+        class="m-2 border shadow-2xl text-accent columns-1 font-jetbrains border-accent bg-primary"
       >
         <SiteLogo logoSrc={src!} href={"/"} />
         <hr />
@@ -116,7 +116,7 @@ const fullPath = Astro.url.pathname;
         </NavBar>
       </div>
       <div
-        class="w-6/12 m-2 text-white border shadow-xl border-accent bg-primary"
+        class="w-6/12 m-2 text-white border shadow-[inset_0_-2px_40px_rgba(0,0,0,0.6)] border-accent bg-primary"
       >
         <div class="inline-flex w-full p-2 font-bold text-accent">
           <FiGlobe className={"my-auto mr-2"} />
