@@ -6,11 +6,16 @@ h1 {
   font-size: 1.5rem;
 }
 
-p{
-  padding-top: .5rem;
-  padding-bottom: .5rem;
+p {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 img {
   content-visibility: auto;
+}
+
+body {
+  background-image: url("/src/images/grid.svg");
+  background-repeat: repeat;
 }
