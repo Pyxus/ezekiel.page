@@ -14,7 +14,7 @@ export default function SiteLogo({ logoSrc, href }: SiteLogoProps) {
             className="mx-auto translate-y-1"
             width="100px"
             src={logoSrc}
-            alt={"Cartoon drawing of Ezekiel"}
+            alt={"Drawing of Ezekiel"}
           />
         </div>
         <h1 className="m-2 text-lg font-bold text-center">Ezekiel Halley</h1>

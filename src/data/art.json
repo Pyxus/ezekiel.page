@@ -1,7 +1,7 @@
 [
   {
     "title": "New Profile Picture",
-    "desc": "Cartoon profile drawing of myself together with Rei, a ghost dog from Guilty Gear Strive.",
+    "desc": "Profile drawing of myself together with Rei, a ghost dog from Guilty Gear Strive.",
     "year": 2022,
     "tags": ["drawing", "character"],
     "src": "/art/pfp-2022.webp",
@@ -65,7 +65,7 @@
   },
   {
     "title": "Isatou Concept",
-    "desc": "Drawing of my friend, who goes by turtle, based on their cosplay of Mitsuri from the anime Demon Slayer.",
+    "desc": "Concept drawing of my character Isatou.",
     "year": 2021,
     "tags": ["drawing", "character"],
     "src": "/art/isatou-concept.webp",
@@ -73,7 +73,7 @@
   },
   {
     "title": "Metsu Persona 5 Confidant",
-    "desc": "Drawing of my friend, who goes by turtle, based on their cosplay of Mitsuri from the anime Demon Slayer.",
+    "desc": "Drawing of my friend Ryon as a confidant from persona 5.",
     "year": 2020,
     "tags": ["drawing", "character"],
     "src": "/art/metsu-p5-confidant.webp",
@@ -81,7 +81,7 @@
   },
   {
     "title": "Moon Authority",
-    "desc": "Drawing of my friend, who goes by turtle, based on their cosplay of Mitsuri from the anime Demon Slayer.",
+    "desc": "Enemy concept sketch.",
     "year": 2021,
     "tags": ["drawing", "character"],
     "src": "/art/moon-authority.webp",
@@ -89,7 +89,7 @@
   },
   {
     "title": "Sin Drawing",
-    "desc": "Drawing of my friend, who goes by turtle, based on their cosplay of Mitsuri from the anime Demon Slayer.",
+    "desc": "Drawing of my character Sin.",
     "year": 2021,
     "tags": ["drawing", "character"],
     "src": "/art/sin-drawing.webp",

@@ -2,43 +2,87 @@
 import {
   FaPalette,
   FaGithubAlt,
-  FaWindowMinimize,
 } from "react-icons/fa/index.js";
-import { FiGlobe } from "react-icons/fi/index.js";
 import {
   RiCodeBoxFill,
   RiContactsFill,
   RiMailFill,
   RiLinkedinBoxFill,
   RiInstagramFill,
-  RiWindow2Fill,
-  RiCloseFill,
 } from "react-icons/ri/index.js";
 import NavBar from "@components/NavBar/index.js";
 import SiteLogo from "@components/SiteLogo";
 import { getImage } from "@astrojs/image";
-import pfpImage from "src/images/pfp-transparent.png";
 import NavItem from "@components/NavBar/NavItem";
+import WindowContainer from "@components/WindowContainer"
 
 const { src } = await getImage({
-  src: pfpImage,
-  alt: "",
+  src: import("src/images/pfp.png"),
+  alt: "Drawing of Ezekiel",
   width: 718,
   height: 1045,
 });
 
 const { title } = Astro.props;
-const currentPath = Astro.url.pathname.split("/")[1];
+const currentPath = "/" + Astro.url.pathname.split("/")[1];
 const fullPath = Astro.url.pathname;
+const navItems = [
+  {
+    title: "Projects",
+    path: "/projects",
+    icon: RiCodeBoxFill,
+  },
+  {
+    title: "Art",
+    path: "/art",
+    icon: FaPalette,
+  },
+  {
+    title: "About",
+    path: "/about",
+    icon: RiContactsFill,
+  },
+  {
+    title: "Contact",
+    path: "/contact",
+    icon: RiMailFill,
+  },
+];
+
+const externalItems = [
+  {
+    icon: RiLinkedinBoxFill,
+    href: "https://www.linkedin.com/in/ezekiel-halley",
+    tooltip: "LinkedIn",
+  },
+  {
+    icon: FaGithubAlt,
+    href: "https://github.com/Pyxus/",
+    tooltip: "GitHub",
+  },
+  {
+    icon: RiInstagramFill,
+    href: "https://www.instagram.com/pyxus_/",
+    tooltip: "Instagram",
+  },
+];
 ---
 
-<!DOCTYPE html>
+<style>
+  body{
+    background-image: url('src/images/grid.svg');
+    background-repeat: repeat;
+  }
+</style>
 
+<!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link as="image" rel="preload" href={src} />
+    <link rel="preload" as="image" href={src} />
     <title>{title}</title>
   </head>
   <body class="bg-secondary">
@@ -49,88 +93,40 @@ const fullPath = Astro.url.pathname;
         <SiteLogo logoSrc={src!} href={"/"} />
         <hr />
         <NavBar>
+          <!-- Site Nav -->
           <div>
             <ul>
-              <NavItem
-                href={"/projects"}
-                isHighlighted={currentPath == "projects"}
-              >
-                <RiCodeBoxFill className={"mx-auto"} size={28} />
-                <div class="text-center">PROJECTS</div>
-              </NavItem>
-              <NavItem href={"/art"} isHighlighted={currentPath == "art"}>
-                <FaPalette className={"mx-auto"} size={28} />
-                <div class="text-center">ART</div>
-              </NavItem>
-              <!--
-              <NavItem href={"/resume"} isHighlighted={currentPath == "resume"}>
-                <ImProfile className={"mx-auto"} size={28} />
-                <div class="text-center">RESUME</div>
-              </NavItem>
-               -->
-              <NavItem href={"/about"} isHighlighted={currentPath == "about"}>
-                <RiContactsFill className={"mx-auto"} size={28} />
-                <div class="text-center">ABOUT</div>
-              </NavItem>
-              <NavItem
-                href={"/contact"}
-                isHighlighted={currentPath == "contact"}
-              >
-                <RiMailFill className={"mx-auto"} size={28} />
-                <div class="text-center">CONTACT</div>
-              </NavItem>
+              {
+                navItems.map((item) => (
+                  <NavItem
+                    href={item.path}
+                    isHighlighted={currentPath == item.path}
+                  >
+                    {<item.icon className={"mx-auto"} size={28} />}
+                    <div class="text-center">{item.title}</div>
+                  </NavItem>
+                ))
+              }
             </ul>
           </div>
+
+          <!-- External Links -->
           <div>
             <ul class="grid grid-cols-3 mx-auto">
-              <NavItem
-                href={"https://www.linkedin.com/in/ezekiel-halley"}
-                tooltip={"LinkedIn"}
-              >
-                <RiLinkedinBoxFill className={"mx-auto"} size={20} />
-              </NavItem>
-              <NavItem href={"https://github.com/Pyxus/"} tooltip={"Github"}>
-                <FaGithubAlt className={"mx-auto"} size={20} />
-              </NavItem>
-              <NavItem
-                href={"https://www.instagram.com/pyxus_/"}
-                tooltip={"Instagram"}
-              >
-                <RiInstagramFill className={"mx-auto"} size={20} />
-              </NavItem>
+              {
+                externalItems.map((item) => (
+                  <NavItem href={item.href} tooltip={item.tooltip}>
+                    {<item.icon size={20} />}
+                  </NavItem>
+                ))
+              }
             </ul>
           </div>
-          <div></div>
         </NavBar>
       </div>
-      <div
-        class="w-6/12 m-2 text-white border shadow-2xl border-accent bg-primary"
-      >
-        <div class="inline-flex w-full p-2 font-bold text-accent">
-          <FiGlobe className={"my-auto mr-2"} />
-          <span class="">{`https://ezekiel.page${fullPath}`}</span>
-          <span class="inline-flex ml-auto">
-            <div
-              class="p-[.08rem] my-auto mr-2 hover:opacity-0 transition text-black bg-neutral"
-            >
-              <FaWindowMinimize />
-            </div>
-            <div
-              class="p-[.08rem] my-auto mr-2 hover:opacity-0 transition text-black bg-neutral"
-            >
-              <RiWindow2Fill />
-            </div>
-            <div
-              class="p-[.08rem] my-auto mr-2 hover:opacity-0 transition text-black bg-highlight"
-            >
-              <RiCloseFill />
-            </div>
-          </span>
-        </div>
-        <div class="mx-3 mb-3 text-black border border-accent bg-neutral">
-          <slot />
-        </div>
-      </div>
+      <WindowContainer title={`https://ezekiel.page${fullPath}`}>
+        <slot/>
+      </WindowContainer>
     </div>
   </body>
 </html>
